@@ -2,6 +2,7 @@ package org.firstinspires.ftc.teamcode.tankrobot;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.hardware.Servo;
 
 public class Hardware {
     public static Hardware instance = null;
@@ -9,7 +10,6 @@ public class Hardware {
 
     public DcMotor leftMotor;
     public DcMotor rightMotor;
-    public DcMotor arm;
 
     public Hardware(Hardware hmap){
     }
@@ -31,7 +31,6 @@ public class Hardware {
 
             leftMotor = hmap.get(DcMotor.class, "leftMotor");
             rightMotor = hmap.get(DcMotor.class, "rightMotor");
-            arm = hmap.get(DcMotor.class, "arm");
         }
 
         public void loop() {
